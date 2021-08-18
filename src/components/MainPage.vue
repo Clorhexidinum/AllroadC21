@@ -34,7 +34,7 @@ export default {
 
 <style lang="scss">
 .main-page {
-  background-image: url('/images/main.jpg');
+  background-image: url('../images/main.jpg');
   background-size: cover;
   background-position: center;
   height: 535px;
