@@ -12,10 +12,19 @@ vue/no-deprecated-slot-attribute */ /* eslint-disable prettier/prettier */
     <section class="page-section">
       <image-title />
       <img-comparison-slider
-        style="width: 100%; margin: 0 auto; display: block"
-      >
-        <img slot="first" src="images/main.jpg" style="width: 100%" />
-        <img slot="second" src="images/new.jpg" style="width: 100%" />
+        style="width: 100%; margin: 0 auto; display: block">
+        <div class="img-box" slot="first">
+          <img src="images/main.jpg" style="width: 100%"/>
+          <span class="img-box__btn one">+</span>
+          <span class="img-box__btn two">+</span>
+          <span class="img-box__btn three">+</span>
+        </div>
+        <div class="img-box" slot="second">
+          <img src="images/new.jpg" style="width: 100%"/>
+          <span class="img-box__btn four">+</span>
+          <span class="img-box__btn five">+</span>
+          <span class="img-box__btn six">+</span>
+        </div>
       </img-comparison-slider>
     </section>
     <section class="page-section line" id="menu0">
@@ -323,4 +332,24 @@ body {
 .handle {
   cursor: col-resize;
 }
+
+.img-box {
+  position: relative;
+
+  &__btn {
+    color: #ffffff;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 </style>
