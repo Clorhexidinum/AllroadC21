@@ -11,7 +11,7 @@ vue/no-deprecated-slot-attribute */ /* eslint-disable prettier/prettier */
   <div class="container">
     <section class="page-section">
       <image-title/>
-      <img-comparison-slider style="width: 800px; margin: 0 auto; display: block;">
+      <img-comparison-slider style="width: 100%; margin: 0 auto; display: block;">
         <img slot="first" src="images/main.jpg" style="width: 100%"/>
         <img slot="second" src="images/new.jpg" style="width: 100%"/>
       </img-comparison-slider>

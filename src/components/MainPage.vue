@@ -5,15 +5,17 @@
       <div class="main-page__box">
         <div>
           <p class="main-page__subtitle">Стоимость</p>
-          <p class="main-page__price">от 1 415 000 ₽</p>
+          <p class="main-page__price">от {{ this.price.toLocaleString() }} ₽</p>
         </div>
         <div>
           <div class="main-page__credit-box">
-            <p class="main-page__subtitle">Кредит</p>
-            <p class="main-page__price">от 31 500 ₽/мес.</p>
-            <a class="main-page__link" href="#">Рассчитать кредит</a>
+            <p class="main-page__subtitle">Рассрочка</p>
+            <p class="main-page__price">
+              от {{ credit.toLocaleString() }} ₽/мес.
+            </p>
+            <a class="main-page__link" href="#">Рассчитать рассрочку</a>
           </div>
-          <button class="main-page__btn">Запросить предложение</button>
+          <a class="main-page__btn" href="#"><img src="images/pokupay_button.png" alt=""></a>
         </div>
       </div>
     </div>
@@ -27,17 +29,25 @@ export default {
   components: {},
 
   data() {
-    return {};
+    return {
+      price: 210000,
+    };
   },
+
+  computed: {
+        credit() {
+            return this.price / 12  
+        },
+    }
 };
 </script>
 
 <style lang="scss">
 .main-page {
-  background-image: url('../images/main.jpg');
+  background-image: url("/images/main.jpg");
   background-size: cover;
   background-position: center;
-  height: 535px;
+  height: 100vh;
   color: #fff;
   padding-bottom: 50px;
 
@@ -52,7 +62,7 @@ export default {
     font-size: 40px;
     padding-bottom: 15px;
     margin-bottom: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   &__box {
@@ -80,15 +90,8 @@ export default {
     text-decoration: underline;
   }
 
-  &__btn {
-    background-color: red;
-    padding: 15px;
-    height: fit-content;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    color: #fff;
-    border-radius: 3px;
+  &__btn img {
+    width: 220px;
   }
 }
 </style>

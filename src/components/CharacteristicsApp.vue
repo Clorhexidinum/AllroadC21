@@ -15,7 +15,7 @@
       <p class="characteristics__price">{{ price.toLocaleString() }} ₽</p>
       <div class="characteristics__buy-box">
         <button class="characteristics__btn">посмотреть наличие</button>
-        <a class="characteristics__link">в кредит от 31 500 ₽/месяц</a>
+        <a class="characteristics__link">в кредит от {{ credit.toLocaleString() }} ₽/месяц</a>
       </div>
     </div>
     <div class="characteristics__item">
@@ -60,6 +60,9 @@ export default {
     },
     price() {
       return this.variants[this.selectedVariant].variantPrice;
+    },
+    credit() {
+      return this.variants[this.selectedVariant].variantPrice / 12;
     },
   },
 };

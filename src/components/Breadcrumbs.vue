@@ -48,7 +48,7 @@ export default {
     content: "";
     position: absolute;
     right: 0;
-    background-image: url("../images/link-arrow.svg");
+    background-image: url("/images/link-arrow.svg");
     width: 6px;
     height: 9px;
     bottom: 7px;
