@@ -5,7 +5,9 @@
       <div class="main-page__box">
         <div>
           <p class="main-page__subtitle">Стоимость</p>
-          <p class="main-page__price">от {{ this.price.toLocaleString() }} ₽</p>
+          <p class="main-page__price">
+            от {{ this.price.toLocaleString() }} ₽
+          </p>
         </div>
         <div>
           <div class="main-page__credit-box">
@@ -15,7 +17,9 @@
             </p>
             <a class="main-page__link" href="#">Рассчитать рассрочку</a>
           </div>
-          <a class="main-page__btn" href="#"><img src="images/pokupay_button.png" alt=""></a>
+          <a class="main-page__btn" href="#"
+            ><img src="images/pokupay_button.png" alt=""
+          /></a>
         </div>
       </div>
     </div>
@@ -35,10 +39,10 @@ export default {
   },
 
   computed: {
-        credit() {
-            return this.price / 12  
-        },
-    }
+    credit() {
+      return this.price / 12;
+    },
+  },
 };
 </script>
 

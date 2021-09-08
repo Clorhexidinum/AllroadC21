@@ -91,7 +91,7 @@ export default {
   }
 
   &__title {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: bold;
     color: rgb(0, 0, 0, 0.5);
     white-space: nowrap;

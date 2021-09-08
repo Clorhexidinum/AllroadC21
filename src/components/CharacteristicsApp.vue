@@ -15,7 +15,7 @@
       <p class="characteristics__price">{{ price.toLocaleString() }} ₽</p>
       <div class="characteristics__buy-box">
         <button class="characteristics__btn">посмотреть наличие</button>
-        <a class="characteristics__link">в кредит от {{ credit.toLocaleString() }} ₽/месяц</a>
+        <a class="characteristics__link">в кредит от {{ credit.toFixed().toLocaleString() }} ₽/месяц</a>
       </div>
     </div>
     <div class="characteristics__item">

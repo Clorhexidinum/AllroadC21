@@ -10,10 +10,12 @@ vue/no-deprecated-slot-attribute */ /* eslint-disable prettier/prettier */
   </section>
   <div class="container">
     <section class="page-section">
-      <image-title/>
-      <img-comparison-slider style="width: 100%; margin: 0 auto; display: block;">
-        <img slot="first" src="images/main.jpg" style="width: 100%"/>
-        <img slot="second" src="images/new.jpg" style="width: 100%"/>
+      <image-title />
+      <img-comparison-slider
+        style="width: 100%; margin: 0 auto; display: block"
+      >
+        <img slot="first" src="images/main.jpg" style="width: 100%" />
+        <img slot="second" src="images/new.jpg" style="width: 100%" />
       </img-comparison-slider>
     </section>
     <section class="page-section line" id="menu0">
@@ -27,7 +29,10 @@ vue/no-deprecated-slot-attribute */ /* eslint-disable prettier/prettier */
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
-      <tabs-app :tabs="['галерея', 'видео']" @clicked="clickGalleryTab" />
+      <tabs-app
+        :tabs="['галерея', 'видео', '360']"
+        @clicked="clickGalleryTab"
+      />
       <splide v-if="activeGalleryTab === 'галерея'" :options="options">
         <splide-slide v-for="slide in slides" :key="slide">
           <img :src="`images/${slide}`" />
@@ -46,26 +51,61 @@ vue/no-deprecated-slot-attribute */ /* eslint-disable prettier/prettier */
     </section>
     <section class="page-section line" id="menu1">
       <h2 class="title">Комплектации</h2>
-      <characteristics-app/>
+      <characteristics-app />
     </section>
     <section class="page-section line" id="menu2">
       <h2 class="title">Особенности</h2>
       <tabs-app
-        :tabs="['преимущества', 'технологии', 'комфорт']"
+        :tabs="[
+          'безопасность',
+          'комфорт',
+          'проходимость',
+          'удобство',
+          'экстерьер',
+        ]"
         @clicked="clickFeaturesTab"
       />
-      <feature-app
-        v-if="activeFeaturesTab === 'преимущества'"
-        :title="'еще больше преимуществ'"
-      />
-      <feature-app
-        v-if="activeFeaturesTab === 'технологии'"
-        :title="'еще больше технологий'"
-      />
-      <feature-app
-        v-if="activeFeaturesTab === 'комфорт'"
-        :title="'больше комфорта богу комфорта!!!'"
-      />
+      <splide
+        v-if="activeFeaturesTab === 'безопасность'"
+        :options="optionsFeatures"
+      >
+        <splide-slide v-for="(item, idx) in safety" :key="idx">
+          <feature-app :title="'еще больше преимуществ'" :image="`${item}`" />
+        </splide-slide>
+      </splide>
+
+      <splide v-if="activeFeaturesTab === 'комфорт'" :options="optionsFeatures">
+        <splide-slide v-for="(item, idx) in comfort" :key="idx">
+          <feature-app :title="'еще больше технологий'" :image="`${item}`" />
+        </splide-slide>
+      </splide>
+
+      <splide
+        v-if="activeFeaturesTab === 'проходимость'"
+        :options="optionsFeatures"
+      >
+        <splide-slide v-for="(item, idx) in passability" :key="idx">
+          <feature-app :title="'еще больше технологий'" :image="`${item}`" />
+        </splide-slide>
+      </splide>
+
+      <splide
+        v-if="activeFeaturesTab === 'удобство'"
+        :options="optionsFeatures"
+      >
+        <splide-slide v-for="(item, idx) in convenience" :key="idx">
+          <feature-app :title="'еще больше технологий'" :image="`${item}`" />
+        </splide-slide>
+      </splide>
+
+      <splide
+        v-if="activeFeaturesTab === 'экстерьер'"
+        :options="optionsFeatures"
+      >
+        <splide-slide v-for="(item, idx) in exterior" :key="idx">
+          <feature-app :title="'еще больше технологий'" :image="`${item}`" />
+        </splide-slide>
+      </splide>
     </section>
     <section class="page-section line" id="menu3">
       <h2 class="title">Как купить</h2>
@@ -92,7 +132,7 @@ import ImageTitle from "./components/ImageTitle.vue";
 import CharacteristicsApp from "./components/CharacteristicsApp.vue";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import 'img-comparison-slider';
+import "img-comparison-slider";
 
 export default {
   name: "AllroadApp",
@@ -111,9 +151,22 @@ export default {
 
   data() {
     return {
-      activeFeaturesTab: "преимущества",
+      activeFeaturesTab: "безопасность",
       activeGalleryTab: "галерея",
       slides: ["main.jpg", "main.jpg", "main.jpg"],
+      safety: ["2159.jpg", "2192.jpg", "2240.jpg"],
+      comfort: ["2159.jpg", "2196.jpg", "2241.jpg"],
+      passability: ["2161.jpg", "2173.jpg"],
+      convenience: [
+        "2172.jpg",
+        "2178.jpg",
+        "2181.jpg",
+        "2200.jpg",
+        "2206.jpg",
+        "2221.jpg",
+        "2252.jpg",
+      ],
+      exterior: ["2159.jpg", "2165.jpg"],
       options: {
         type: "loop",
         perPage: 2,
@@ -122,6 +175,18 @@ export default {
         gap: 50,
         arrows: false,
         pagination: false,
+        cover: true,
+        speed: 500,
+        rewindSpeed: 2000,
+      },
+      optionsFeatures: {
+        type: "loop",
+        perPage: 1,
+        height: 300,
+        autoplay: true,
+        gap: 50,
+        arrows: true,
+        pagination: true,
         cover: true,
         speed: 500,
         rewindSpeed: 2000,
@@ -145,7 +210,7 @@ export default {
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 *,
@@ -194,7 +259,7 @@ body {
 
 .container {
   max-width: 1200px;
-  padding: 0 15px;
+  padding: 0 30px;
   margin: 0 auto;
 }
 
@@ -236,5 +301,26 @@ body {
 
 .splide__slide + .is-active {
   filter: opacity(1);
+}
+
+.splide__pagination__page.is-active {
+  background: red;
+}
+
+.splide__pagination {
+  bottom: -1.5em;
+}
+
+.splide__arrow--prev {
+  left: -2.6em;
+}
+
+.splide__arrow--next {
+  right: -2.6em;
+}
+
+.divider:after,
+.handle {
+  cursor: pointer;
 }
 </style>
