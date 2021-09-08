@@ -15,7 +15,6 @@
             <p class="main-page__price">
               от {{ credit.toLocaleString() }} ₽/мес.
             </p>
-            <a class="main-page__link" href="#">Рассчитать рассрочку</a>
           </div>
           <a class="main-page__btn" href="#"
             ><img src="images/pokupay_button.png" alt=""
@@ -87,11 +86,6 @@ export default {
 
   &__subtitle {
     margin-bottom: 5px;
-  }
-
-  &__link {
-    font-size: 13px;
-    text-decoration: underline;
   }
 
   &__btn img {
