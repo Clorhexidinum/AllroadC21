@@ -321,6 +321,6 @@ body {
 
 .divider:after,
 .handle {
-  cursor: pointer;
+  cursor: col-resize;
 }
 </style>
