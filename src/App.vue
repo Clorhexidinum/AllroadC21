@@ -175,7 +175,7 @@ export default {
         "2221.jpg",
         "2252.jpg",
       ],
-      exterior: ["2159.jpg", "2165.jpg"],
+      exterior: ["2159.jpg", "2165.jpg", "DSC_3100.jpg"],
       options: {
         type: "loop",
         perPage: 2,

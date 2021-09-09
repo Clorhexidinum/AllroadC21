@@ -32,13 +32,13 @@ export default {
       selectedVariant: 0,
       variants: [
         {
-          variantImage: "main.jpg",
+          variantImage: "DSC_3100.jpg",
           variantPrice: 100000,
           variantColor: "red",
           variantTitle: "one",
         },
         {
-          variantImage: "new.jpg",
+          variantImage: "1_0003_3.jpg",
           variantPrice: 200000,
           variantColor: "orange",
           variantTitle: "two",
