@@ -30,13 +30,7 @@ vue/no-deprecated-slot-attribute */ /* eslint-disable prettier/prettier */
     <section class="page-section line" id="menu0">
       <h2 class="title">Обзор</h2>
       <p class="descr">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        Новое внедорожное электрическое кресло-коляска MET ALLROAD рассчитано как на короткие передвижения по городу или в помещении, так и на длительные путешествия в любой время года. Удобное сиденье с откидной спинкой, откидные регулируемые подлокотники и подножки, интуитивно понятный пульт управления гарантируют комфортную посадку.  Два мощных 500W мотора и два современных тяговых аккумулятора ёмкостью 55AH говорит об уникальной проходимости. При этом электрическое кресло-коляска уверенно развивает скорость до 13 км/ч, а дальность хода на одной зарядке составляет 35 км. Выразительный дизайн алюминиевых дисков, впечатляющая LED-оптика и яркий цвет рамы из стальных труб различного диаметра и сечения добавляют непередаваемые эмоции от управления коляской.
       </p>
       <tabs-app
         :tabs="['галерея', 'видео', '360']"
@@ -66,16 +60,16 @@ vue/no-deprecated-slot-attribute */ /* eslint-disable prettier/prettier */
       <h2 class="title">Особенности</h2>
       <tabs-app
         :tabs="[
-          'безопасность',
-          'комфорт',
-          'проходимость',
-          'удобство',
-          'экстерьер',
+          'Проходимость',
+          'Безопасность',
+          'Удобство',
+          'Внешний вид',
+          'Комфор',
         ]"
         @clicked="clickFeaturesTab"
       />
       <splide
-        v-if="activeFeaturesTab === 'безопасность'"
+        v-if="activeFeaturesTab === 'Проходимость'"
         :options="optionsFeatures"
       >
         <splide-slide v-for="(item, idx) in safety" :key="idx">
@@ -83,14 +77,14 @@ vue/no-deprecated-slot-attribute */ /* eslint-disable prettier/prettier */
         </splide-slide>
       </splide>
 
-      <splide v-if="activeFeaturesTab === 'комфорт'" :options="optionsFeatures">
+      <splide v-if="activeFeaturesTab === 'Безопасность'" :options="optionsFeatures">
         <splide-slide v-for="(item, idx) in comfort" :key="idx">
           <feature-app :title="'еще больше технологий'" :image="`${item}`" />
         </splide-slide>
       </splide>
 
       <splide
-        v-if="activeFeaturesTab === 'проходимость'"
+        v-if="activeFeaturesTab === 'Удобство'"
         :options="optionsFeatures"
       >
         <splide-slide v-for="(item, idx) in passability" :key="idx">
@@ -99,7 +93,7 @@ vue/no-deprecated-slot-attribute */ /* eslint-disable prettier/prettier */
       </splide>
 
       <splide
-        v-if="activeFeaturesTab === 'удобство'"
+        v-if="activeFeaturesTab === 'Внешний вид'"
         :options="optionsFeatures"
       >
         <splide-slide v-for="(item, idx) in convenience" :key="idx">
@@ -108,7 +102,7 @@ vue/no-deprecated-slot-attribute */ /* eslint-disable prettier/prettier */
       </splide>
 
       <splide
-        v-if="activeFeaturesTab === 'экстерьер'"
+        v-if="activeFeaturesTab === 'Комфор'"
         :options="optionsFeatures"
       >
         <splide-slide v-for="(item, idx) in exterior" :key="idx">
