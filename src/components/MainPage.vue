@@ -70,10 +70,14 @@
 
         &__overlay {
             position: absolute;
-            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+            background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 1) 0%,
+                rgba(255, 255, 255, 0) 100%
+            );
             height: 240px;
-            width: 115%;
-            left: -60px;
+            width: 200%;
+            left: -500px;
             bottom: 0;
         }
 
