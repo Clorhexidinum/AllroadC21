@@ -4,12 +4,13 @@
             <div class="main-page__overlay"></div>
             <div class="main-page__tittle-box">
                 <h1 class="main-page__tittle">Met Allroad C21</h1>
+                <p class="main-page__descr">
+                        Для тех, кто не готов отступать перед препятствиями
+                    </p>
             </div>
             <div class="main-page__box">
                 <div>
-                    <p class="main-page__descr">
-                        Для тех, кто не готов отступать перед препятствиями
-                    </p>
+                    
                     <p class="main-page__subtitle">Стоимость</p>
                     <p class="main-page__price">
                         от {{ this.price.toLocaleString() }} ₽
@@ -83,12 +84,13 @@
 
         &__tittle-box {
             z-index: 10;
+            margin-bottom: 22px;
         }
 
         &__tittle {
             font-size: 40px;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
+            padding-bottom: 13px;
+            margin-bottom: 3px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         }
 
@@ -109,16 +111,13 @@
             margin-right: 20px;
         }
 
-        &__subtitle {
-            margin-bottom: 5px;
-        }
-
         &__descr {
-            margin-bottom: 15px;
+            margin-bottom: 5px;
+            font-size: 27px;
         }
 
         &__btn img {
-            width: 220px;
+            width: 171px;
         }
     }
 </style>

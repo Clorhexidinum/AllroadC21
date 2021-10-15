@@ -442,13 +442,16 @@ vue/no-deprecated-slot-attribute */ /* eslint-disable prettier/prettier */
 
     .descr {
         display: inline-block;
-        max-width: 65%;
         margin-bottom: 40px;
     }
 
     .main {
         background-color: black;
         margin-bottom: 80px;
+    }
+
+    .splide .splide--loop .splide--ltr .splide--draggable .is-active {
+      margin-left: 85px;
     }
 
     .splide__slide {

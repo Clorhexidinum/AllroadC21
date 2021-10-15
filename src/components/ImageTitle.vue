@@ -2,8 +2,7 @@
     <div class="image-title">
         <div class="image-title__item" v-if="active == true">
             <p class="image-title__descr image-title__descr--left">
-                Мы знаем, что в нашей среде от кресла-коляски требуется чуть
-                больше. Неприхотливость, впечатляющая проходимость и надежность
+                Неприхотливость, впечатляющая проходимость и надежность
                 - вот то, что делает MET ALLROAD действительно внедорожной
                 коляской. Твердый характер и практичность, воплощенная в каждой
                 детали.
@@ -14,7 +13,7 @@
                 class="image-title__title image-title__title--left"
                 :class="active ? 'image-title__title--active' : ''"
             >
-                Любая среда
+                Любая среда  
             </p>
             <p
                 class="image-title__title image-title__title--left"
@@ -40,13 +39,13 @@
                 class="image-title__title image-title__title--right"
                 :class="active ? '' : 'image-title__title--active'"
             >
-                Сочный дизайн
+                Сочный дизайн и новый 
             </p>
             <p
                 class="image-title__title image-title__title--right"
                 :class="active ? '' : 'image-title__title--active'"
             >
-                и новый уровень комфорта
+                уровень комфорта
             </p>
         </div>
         <div class="image-title__item" v-if="active == false">
@@ -74,34 +73,37 @@
     .image-title {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 36px;
-        line-height: 36px;
+        margin-bottom: 15px;
+        line-height: 22px;
         align-items: center;
 
         &__descr {
             font-size: 14px;
 
             &--left {
-                text-align: right;
+                text-align: left;
                 margin-right: 30px;
             }
 
             &--right {
-                text-align: left;
+                text-align: right;
                 margin-left: 30px;
             }
         }
 
         &__title {
-            font-size: 24px;
+            font-size: 18px;
+            line-height: 20px;
             font-weight: bold;
             color: rgb(0, 0, 0, 0.5);
             white-space: nowrap;
             cursor: pointer;
             transition: 0.5s;
+            padding-bottom: 2px;
 
             &--left {
                 padding-right: 40px;
+                text-align: right;
             }
 
             &--right {
@@ -110,8 +112,11 @@
             }
 
             &--active {
-                font-size: 36px;
-                color: rgb(0, 0, 0, 1);
+                font-size: 23px;
+    line-height: 29px;
+    color: black;
+    letter-spacing: -0.9px;
+    text-transform: uppercase;
             }
         }
 
@@ -119,27 +124,27 @@
             display: block;
             width: 70px;
             height: 2px;
-            background-color: red;
+            background-color: #f5a408;
             position: relative;
             cursor: pointer;
         }
 
         &__decor {
             display: block;
-            width: 25px;
-            height: 25px;
-            background-color: red;
+            width: 35px;
+            height: 35px;
+            background-color: #f5a408;
             padding: 3px;
             background: radial-gradient(
                 circle,
-                rgba(255, 0, 0, 1) 0%,
-                rgba(255, 0, 0, 1) 40%,
+                rgba(245, 164, 8, 1) 0%,
+                rgba(245, 164, 8, 1) 40%,
                 rgba(249, 249, 249, 0) 50%
             );
-            border: 1px dashed red;
+            border: 1px dashed #f5a408;
             border-radius: 50%;
             position: absolute;
-            top: -11px;
+            top: -16px;
             left: -18px;
             transition: 0.3s;
 
@@ -154,7 +159,7 @@
             height: 2px;
             top: -2px;
             left: 0;
-            background-color: red;
+            background-color: #f5a408;
             transform: rotate(-45deg);
 
             &::before {
@@ -164,7 +169,7 @@
                 height: 2px;
                 top: 3px;
                 left: -3px;
-                background-color: red;
+                background-color: #f5a408;
                 transform: rotate(-90deg);
             }
 
