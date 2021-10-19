@@ -54,7 +54,7 @@
 
 <style lang="scss">
     .main-page {
-        background-image: url("/images/main.jpg");
+        background-image: url("/images/DSC_3371 copy.jpg");
         background-size: cover;
         background-position: center;
         height: 100vh;
