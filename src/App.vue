@@ -150,13 +150,7 @@ vue/no-deprecated-slot-attribute */ /* eslint-disable prettier/prettier */
         <section class="page-section line" id="menu3">
             <h2 class="title">Как купить</h2>
             <p class="descr">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Закажите MET ALLROAD в официальном интернет-магазине <a href="https://www.met.ru/goods/16230/">MET</a>
             </p>
         </section>
     </div>
@@ -444,6 +438,10 @@ vue/no-deprecated-slot-attribute */ /* eslint-disable prettier/prettier */
     .descr {
         display: inline-block;
         margin-bottom: 40px;
+    }
+
+    .descr a {
+        color: #f5a408;
     }
 
     .main {
