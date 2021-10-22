@@ -58,12 +58,13 @@ vue/no-deprecated-slot-attribute */ /* eslint-disable prettier/prettier */
                 v-if="activeGalleryTab === 'видео'"
                 width="1200"
                 height="315"
-                src="https://www.youtube.com/embed/_VwPbCMjUr4"
+                src="https://www.youtube.com/embed/9QMT_Uy9D1Y"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
             ></iframe>
+            
         </section>
         <section class="page-section line" id="menu1">
             <h2 class="title">Комплектации</h2>
