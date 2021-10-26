@@ -97,7 +97,6 @@ export default {
         {
           variantImage: "DSC_3100.jpg",
           variantPrice: 210000,
-          variantColor: "red",
           variantTitle: "MET ALLROAD C21",
           variantWidth: 62,
           variantMaxSpeed: 10,
@@ -108,7 +107,6 @@ export default {
         {
           variantImage: "1_0003_3.jpg",
           variantPrice: 229000,
-          variantColor: "orange",
           variantTitle: "MET ALLROAD C21+",
           variantWidth: 64,
           variantMaxSpeed: 12,
@@ -152,9 +150,6 @@ export default {
     url() {
       return this.variants[this.selectedVariant].variantLink;
     },
-    color() {
-      return this.variants[this.selectedVariant].variantColor;
-    },
   },
 };
 </script>
@@ -181,6 +176,11 @@ export default {
     justify-content: center;
   }
 
+  
+  &__btn-box > .active {
+    background-color: red;
+  }
+
   &__switch-btn {
     width: 20px;
     height: 20px;
@@ -190,10 +190,6 @@ export default {
     margin-right: 10px;
     margin-bottom: 15px;
     background-color: #ccc;
-  }
-
-  &__switch-btn + .active {
-    background-color: red !important;
   }
 
   &__btn-title {

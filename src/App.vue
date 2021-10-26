@@ -64,6 +64,14 @@ vue/no-deprecated-slot-attribute */ /* eslint-disable prettier/prettier */
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
             ></iframe>
+            <div v-if="activeGalleryTab === '360'">
+                ввввввввв
+                <vue-three-sixty 
+                    :amount="36"
+                    imagePath="images/360"
+                    fileName="allroad_{index}.jpg"
+                />
+            </div>
             
         </section>
         <section class="page-section line" id="menu1">
@@ -167,6 +175,8 @@ vue/no-deprecated-slot-attribute */ /* eslint-disable prettier/prettier */
     import { Splide, SplideSlide } from "@splidejs/vue-splide";
     import "@splidejs/splide/dist/css/themes/splide-default.min.css";
     import "img-comparison-slider";
+    import VueThreeSixty from 'vue-360';
+    import 'vue-360/dist/css/style.css';
 
     export default {
         name: "AllroadApp",
@@ -181,6 +191,7 @@ vue/no-deprecated-slot-attribute */ /* eslint-disable prettier/prettier */
             SplideSlide,
             ImageTitle,
             CharacteristicsApp,
+            VueThreeSixty,
         },
 
         data() {
