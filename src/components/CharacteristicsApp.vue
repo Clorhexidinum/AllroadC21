@@ -8,6 +8,7 @@
           v-for="(variant, index) in variants"
           :key="variant.variantId"
           @click="updateProduct(index)"
+          :class="{ active: selectedVariant === index }"
         ></button>
         <p class="characteristics__btn-title">{{ title }}</p>
       </div>
@@ -55,7 +56,7 @@
         </li>
         <li class="characteristics__list-item">
           <div>Нагрузка</div>
-          <div>180</div>
+          <div>180 кг</div>
         </li>
         <li class="characteristics__list-item">
           <div>Гарантия</div>
@@ -121,11 +122,6 @@ export default {
   methods: {
     updateProduct(index) {
       this.selectedVariant = index;
-      let btns = document.querySelectorAll(".characteristics__switch-btn");
-      for (i = 0; i < btns.length(); i++) {
-        btns[i].classList.remove("active")
-      }
-      btns[index].classList.add("active")
     },
   },
   computed: {
@@ -196,8 +192,8 @@ export default {
     background-color: #ccc;
   }
 
-  &__switch-btn .btn-active {
-    background-color: red;
+  &__switch-btn + .active {
+    background-color: red !important;
   }
 
   &__btn-title {
